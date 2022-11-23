@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Montserrat&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+
+.img-header {
+  background: url(./img/repas-pour-tous-3.jpg) fixed no-repeat center/cover;
+  overflow-y: hidden;
+}
+header {
+  max-height:  200px ;
+}
+.header-container, section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(96, 240, 0);
+}
+.header-container{
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background: rgba(173, 155, 117, 0.377);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 2rem;
+  text-align: center;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  width: 100vw;
+  background: rgb(109, 223, 2);
+}
+body > nav > div {
+  width: 100%;
+  height: 66px;
+}
+.img-logo {
+  width: 175px;
+  height: 66px;
+}
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 20px 0 20px 0px;
+  text-align: center;
+  margin: 0 40px 0 0;
+}
+.pages {
+  position: relative;
+}
+.container, section {
+  background: #ffffff;
+  height: 100%;
+  padding: 60px 25px 50px;
+  /* margin: 0 auto; */
+}
+
+section {
+    opacity: 0;  
+    position: absolute;
+    top: 0px;
+    width: 0;
+    transition: all ease-in 1s;
+    flex-direction: column;
+    color: #191919;
+} 
+section:target {
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all ease-in 1s;
+}
+.img-pos {
+  display: flex;
+  margin: 0 auto;
+
+  width: 243px;
+  height: 150px;
+}
+.img-event-1{
+  border-radius: 15px;
+}
+footer {
+  background: rgb(109, 223, 2);
+}
