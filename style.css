@@ -63,16 +63,24 @@ nav a {
   margin: 0 40px 0 0;
   transition: 0.5s;
 }
-nav > a:hover {
+nav > a:hover,
+.mail > a:hover {
   color: #ffffff;
   transition: 0.5s;
   font-size: 0.95rem;
 }
 .pages {
-  position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: #191919;
   min-height: 100%;
+}
+.container {
+  background: #ffffff;
+  min-height: 100%;
+  padding: 25px;
 }
 .content {
   background: #cadaac;
@@ -88,7 +96,8 @@ h2 {
 .content > p {
   margin: 20px 0 20px 0;
 }
-.img-pos {
+.img-pos,
+.imgdirection {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -131,6 +140,11 @@ h2 {
   border-radius: 15px;
 }
 .btn > a > i {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 5px;
+}
+.btn > a > i {
   padding: 20px 30px;
 }
 .btn > a > i:hover {
@@ -142,27 +156,10 @@ button:hover {
   box-shadow: 3px 4px 8px 0px;
   transition: 0.2s ease-in-out;
 }
-.container, section {
-  background: #ffffff;
-  min-height: 100%;
-  padding: 60px 25px 50px;
-}
-section {
-    display: none;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    height: 100%;
-    transition: all ease-in 3s;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    color: #191919;
-} 
-section:target{
-    display: flex;
-    z-index: 2;
-    transition: all ease-in 3s;
+iframe {
+  width: 230px;
+  height: 300px;
+  border-radius: 20px;
 }
 .d-event {
   text-decoration: underline;
@@ -171,5 +168,135 @@ section:target{
 footer {
   background: rgb(109, 223, 2);
   width:100%;
-  z-index: 2;
+}
+.footer-container {
+  padding: 15px;
+}
+
+/*************************************** MEDIA QUERIES *********************************************/
+
+/* Pour le media queries j'ai utiliser les donnée de ce site : https://www.altamira.ai/blog/common-screen-sizes-for-responsive-web-design/  
+
+taille mobile : le site a été developper en 360*640 car c'est la taille d'écrans moyenne la plus utiliser dans le monde
+
+tablet : j'ai pris la taille Ipad Mini dans l'inspecteur d'élements 768*1024 en vertical 1024*768 en horizontal
+
+Desktop : comme pour mobile j'ai utiliser les donnée du site pour sélectionnez la taille moyenne la plus utiliser au monde 1366*768*/
+
+/* tablet vertical */
+@media (min-width: 768px) and (min-height: 1024px) {
+  .img-logo {
+    width: 250px;
+    height: 66px;
+  }
+  .img-actions{
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 290px;
+  }
+  .btn-container {
+    height: 70px;
+    width: 100%;
+    margin: 40px 0 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .imgdirection {
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  .btn > a > i {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px 35px;
+    font-size: 1.25rem;
+  }
+  iframe {
+    width: 650px;
+    height: 500px;
+  }
+}
+/* tablet horizontal */
+@media (min-width: 1024px) and (min-height: 768px) {
+  .img-logo {
+    width: 250px;
+    height: 66px;
+  }
+  .img-actions{
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 290px;
+  }
+  .btn-container {
+    height: 70px;
+    width: 100%;
+    margin: 40px 0 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .imgdirection {
+    display: flex;
+    flex-direction: row;
+    height: 250px;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  .btn > a > i {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px 35px;
+    font-size: 1.25rem;
+  }
+  iframe {
+    width: 650px;
+    height: 500px;
+  }
+}
+/* desktop */
+@media (min-width: 1366px) and (min-height: 768px) {
+  .img-logo {
+    width: 250px;
+    height: 66px;
+  }
+  .img-actions{
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 500px;
+  }
+  .btn-container {
+    height: 70px;
+    width: 100%;
+    margin: 40px 0 30px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .imgdirection {
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  .btn > a > i {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px 35px;
+    font-size: 1.25rem;
+  }
+  iframe {
+    width: 1100px;
+    height: 500px;
+  }
 }
