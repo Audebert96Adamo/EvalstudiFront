@@ -165,6 +165,15 @@ iframe {
   text-decoration: underline;
   font-weight: 800;
 }
+span > a {
+  color: rgb(60, 65, 73);
+  font-weight: 900;
+  font-size: 1.15rem;
+  padding: 5px;
+}
+span > a:hover {
+  color: #ffffff;
+}
 footer {
   background: rgb(109, 223, 2);
   width:100%;
@@ -174,15 +183,6 @@ footer {
 }
 
 /*************************************** MEDIA QUERIES *********************************************/
-
-/* Pour le media queries j'ai utiliser les donnée de ce site : https://www.altamira.ai/blog/common-screen-sizes-for-responsive-web-design/  
-
-taille mobile : le site a été developper en 360*640 car c'est la taille d'écrans moyenne la plus utiliser dans le monde
-
-tablet : j'ai pris la taille Ipad Mini dans l'inspecteur d'élements 768*1024 en vertical 1024*768 en horizontal
-
-Desktop : comme pour mobile j'ai utiliser les donnée du site pour sélectionnez la taille moyenne la plus utiliser au monde 1366*768*/
-
 /* tablet vertical */
 @media (min-width: 768px) and (min-height: 1024px) {
   .img-logo {

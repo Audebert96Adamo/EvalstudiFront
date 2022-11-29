@@ -1,0 +1,7 @@
+Pour le media queries j'ai utiliser les donnée de ce site : https://www.altamira.ai/blog/common-screen-sizes-for-responsive-web-design/  
+
+taille mobile : le site a été developper en 360*640 car c'est la taille d'écrans moyenne la plus utiliser dans le monde
+
+tablet : j'ai pris la taille Ipad Mini dans l'inspecteur d'élements 768*1024 en vertical 1024*768 en horizontal. Et si on observe les tailles du Standard Desktop Screen Size Stats Worldwide du site cette taille correspond aussi a la taille d'écrans desktop la plus petite 
+
+Desktop : comme pour mobile j'ai utiliser les donnée du site pour sélectionnez la taille moyenne la plus utiliser au monde 1366*768
